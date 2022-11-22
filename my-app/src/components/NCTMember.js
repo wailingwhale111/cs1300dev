@@ -1,4 +1,7 @@
 import "./NCTMember.css"
+import React from 'react'
+import {Card, Button} from "react-bootstrap"
+
 export default function NCTMember(props) {
 	// function handleClick() {
   //   const itemInCart = {name: props.name, price: props.price, quantity: 1};
@@ -17,13 +20,20 @@ export default function NCTMember(props) {
   //     props.setCart(props.cart.concat(itemInCart));
   //   }
   // };
-  return (
-		 <div>
-        <h2> {props.name}</h2>
-        <img src={props.image} alt={props.group}/>
-        <p> Group: {props.group}</p>
-        <p> Position: {props.position}</p>
-        <button>Add to Cart</button>
-      </div>
-	);
+  const card = (
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={props.image} />
+      <Card.Body>
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Subtitle>Group: {props.group} <hr/> Position: {props.position}</Card.Subtitle>
+      </Card.Body>
+      <Card.Footer className="d-flex flex-column align-items-end">
+        <Button variant="primary">
+          Add to My Bias
+        </Button>
+      </Card.Footer>
+    </Card>
+  );
+
+  return card
 }
