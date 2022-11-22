@@ -1,5 +1,5 @@
-import "./NCTItem.css"
-export default function NCTItem(props) {
+import "./NCTMember.css"
+export default function NCTMember(props) {
 	// function handleClick() {
   //   const itemInCart = {name: props.name, price: props.price, quantity: 1};
   //   const itemExistInCart = props.cart.find((element) => element.name === props.name);

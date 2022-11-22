@@ -1,10 +1,10 @@
 import { useState } from "react";
 import './App.css';
 import nctData from "./assets/nct-data.json";
-import NCTItem from "./components/NCTItem";
+import NCTMember from "./components/NCTMember";
 
-nctData.forEach((item) => {
-  item.image = process.env.PUBLIC_URL + "/" + item.image;
+nctData.forEach((member) => {
+  member.image = process.env.PUBLIC_URL + "/" + member.image;
 });
 
 function App() {
@@ -16,18 +16,18 @@ function App() {
   return (
     <div className="App">
       <h1>My NCT Universe</h1> 
-      {nctData.map((item, index) => (
-       <NCTItem 
+      {nctData.map((member, index) => (
+       <NCTMember 
        index={index}
-       name={item.name} 
-       image={item.image} 
-       position={item.position} 
-       group={item.group}
-       alphabetical={item.alphabetical}
+       name={member.name} 
+       image={member.image} 
+       position={member.position} 
+       group={member.group}
+       alphabetical={member.alphabetical}
        setCart={setCart}
        cart={cart}
 
-       ></NCTItem>
+       ></NCTMember>
       ))}
 
       {/* <div>
