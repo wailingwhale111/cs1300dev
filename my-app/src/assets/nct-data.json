@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Taeil",
+    "position": "vocal",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 17,
+    "image": "images/taeil.jpeg"
+  },
+  {
+    "name": "Johnny",
+    "position": "dancer, rapper, vocal",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 9,
+    "image": "images/johnny.jpeg"
+  },
+  {
+    "name": "Taeyong",
+    "position": "leader, rapper, dancer, vocal",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 18,
+    "image": "images/taeyong.jpeg"
+  },
+  {
+    "name": "Yuta",
+    "position": "dancer, vocal, rapper",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 23,
+    "image": "images/yuta.jpeg"
+  },
+  {
+    "name": "Kun",
+    "position": "leader, vocal, rapper",
+    "group": "WayV, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 11,
+    "image": "images/kun.jpeg"
+  },
+  {
+    "name": "Doyoung",
+    "position": "vocal",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 2,
+    "image": "images/doyoung.jpeg"
+  },
+  {
+    "name": "Ten",
+    "position": "dancer, rapper, vocal",
+    "group": "NCT U, WayV, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 19,
+    "image": "images/ten.jpeg"
+  },
+  {
+    "name": "Jaehyun",
+    "position": "vocal, dancer, rapper",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 5,
+    "image": "images/jaehyun.jpeg"
+  },
+  {
+    "name": "Winwin",
+    "position": "dancer, vocalist, rapper",
+    "group": "NCT 127, NCT U, WayV, NCT 2018, NCT 2020",
+    "alphabetical": 20,
+    "image": "images/winwin.jpeg"
+  },
+  {
+    "name": "Jungwoo",
+    "position": "dancer, vocal",
+    "group": "NCT 127, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 10,
+    "image": "images/jungwoo.jpeg"
+  },
+  {
+    "name": "Lucas",
+    "position": "rapper, vocal",
+    "group": "NCT U, WayV, NCT 2018, NCT 2020",
+    "alphabetical": 12,
+    "image": "images/lucas.jpeg"
+  },
+  {
+    "name": "Mark",
+    "position": "leader, rapper, dancer",
+    "group": "NCT 127, NCT U, NCT DREAM, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 13,
+    "image": "images/mark.jpeg"
+  },
+  {
+    "name": "Xiaojun",
+    "position": "vocal",
+    "group": "WayV, NCT U, NCT 2020, NCT 2021",
+    "alphabetical": 21,
+    "image": "images/xiaojun.jpeg"
+  },
+  {
+    "name": "Hendery",
+    "position": "dancer, rapper, vocal",
+    "group": "NCT U, NCT 2020, NCT 2021",
+    "alphabetical": 4,
+    "image": "images/hendery.jpeg"
+  },
+  {
+    "name": "Renjun",
+    "position": "vocal, dancer",
+    "group": "NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 14,
+    "image": "images/renjun.jpeg"
+  },
+  {
+    "name": "Jeno",
+    "position": "dancer, rapper, vocal",
+    "group": "NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 7,
+    "image": "images/jeno.jpeg"
+  },
+  {
+    "name": "Haechan",
+    "position": "dancer, vocal",
+    "group": "NCT 127, NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 3,
+    "image": "images/haechan.jpeg"
+  },
+  {
+    "name": "Jaemin",
+    "position": "dancer, rapper, vocal",
+    "group": "NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 6,
+    "image": "images/jaemin.jpeg"
+  },
+  {
+    "name": "Yangyang",
+    "position": "rapper, dancer, vocal",
+    "group": "NCT U, WayV, NCT 2020, NCT 2021",
+    "alphabetical": 22,
+    "image": "images/yangyang.jpeg"
+  },
+  {
+    "name": "Shotaro",
+    "position": "rapper, dancer",
+    "group": "NCT U, NCT 2020, NCT 2021",
+    "alphabetical": 15,
+    "image": "images/shotaro.jpeg"
+  },
+  {
+    "name": "Sungchan",
+    "position": "rapper",
+    "group": "NCT U, NCT 2020, NCT 2021",
+    "alphabetical": 16,
+    "image": "images/sungchan.jpeg"
+  },
+  {
+    "name": "Chenle",
+    "position": "vocal",
+    "group": "NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 22,
+    "image": "images/chenle.jpeg"
+  },
+  {
+    "name": "Jisung",
+    "position": "dancer, vocal, rapper",
+    "group": "NCT DREAM, NCT U, NCT 2018, NCT 2020, NCT 2021",
+    "alphabetical": 8,
+    "image": "images/jisung.jpeg"
+  }
+]
