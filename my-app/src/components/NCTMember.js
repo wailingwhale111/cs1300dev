@@ -25,7 +25,7 @@ export default function NCTMember(props) {
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Subtitle> <strong>Position:</strong> {props.position} <br/> <strong>Sub-Groups:</strong> {props.group} <hr/></Card.Subtitle>
+        <Card.Subtitle> <strong>Position:</strong> {props.position} <br/> <strong>Sub-Groups:</strong> {props.group} <br/> <strong>Age:</strong> {props.age}<hr/></Card.Subtitle>
         <Card.Text className="d-flex flex-column align-items-end">
           <Button variant="dark"> Add to My Bias </Button>
         </Card.Text>

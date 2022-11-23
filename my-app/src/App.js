@@ -33,6 +33,7 @@ function App() {
                 position={member.position} 
                 group={member.group} 
                 alphabetical={member.alphabetical} 
+                age={member.age}
                 setCart={setCart} 
                 cart={cart}/>
                 </Col>))}
@@ -120,10 +121,11 @@ function App() {
                       />
                     </div>
                   </Form>
-                  <hr/>
-                  <strong>My Bias List</strong>
                 </Card.Text>
               </Card.Body>
+              <Card.Footer>
+                <strong>My Bias List:</strong>
+              </Card.Footer>
             </Card>
           </Col>
         </Row>
