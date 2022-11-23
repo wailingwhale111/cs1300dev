@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import nctData from "./assets/nct-data.json";
 import NCTMember from "./components/NCTMember";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card, Form} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -25,7 +25,7 @@ function App() {
             <Container>
               <Row>
                 {nctData.map((member, index) => (
-                 <Col id={index} className="d-flex align-items-stretch">
+                 <Col id={index} className="d-flex justify-content-around align-items-stretch">
                    <NCTMember 
                 index={index} 
                 name={member.name} 
@@ -38,6 +38,93 @@ function App() {
                 </Col>))}
               </Row>
             </Container>
+          </Col>
+          <Col lg={3}>
+            <Card>
+              <Card.Body>
+                <Card.Text>
+                  <h4>Sort by:</h4>
+                  <Form>
+                    <div key={`radio`} className="mb-3">
+                      <Form.Check
+                        type={`radio`}
+                        id={`radio`}
+                        label={'Age'}
+                        defaultChecked
+                      />
+                      <Form.Check
+                        type={`radio`}
+                        id={`radio1`}
+                        label={`Alphabetical`}
+                      />
+                    </div>
+                  </Form>
+                  <h4>Filter by:</h4>
+                  <strong>Position</strong>
+                  <Form>
+                    <div key={`default-checkbox`} className="mb-3">
+                      <Form.Check 
+                        type={`checkbox`}
+                        id={`default-checkbox1`}
+                        label={`Vocalist`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox2`}
+                        label={`Rapper`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox3`}
+                        label={`Dancer`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox4`}
+                        label={`Leader`}
+                      />
+                    </div>
+                  </Form>
+                  <strong>Sub-Groups</strong>
+                  <Form>
+                    <div key={`default-checkbox`} className="mb-3">
+                      <Form.Check 
+                        type={`checkbox`}
+                        id={`default-checkbox1`}
+                        label={`NCT 127`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox2`}
+                        label={`NCT DREAM`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox3`}
+                        label={`NCT U`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox4`}
+                        label={`NCT 2018`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox4`}
+                        label={`NCT 2020`}
+                      />
+                      <Form.Check
+                        type={`checkbox`}
+                        id={`default-checkbox4`}
+                        label={`NCT 2021`}
+                      />
+                    </div>
+                  </Form>
+                  <hr/>
+                  <strong>My Bias List</strong>
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>

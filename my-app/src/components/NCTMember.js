@@ -25,13 +25,11 @@ export default function NCTMember(props) {
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Subtitle>Group: {props.group} <hr/> Position: {props.position}</Card.Subtitle>
+        <Card.Subtitle> <strong>Position:</strong> {props.position} <br/> <strong>Sub-Groups:</strong> {props.group} <hr/></Card.Subtitle>
+        <Card.Text className="d-flex flex-column align-items-end">
+          <Button variant="dark"> Add to My Bias </Button>
+        </Card.Text>
       </Card.Body>
-      <Card.Footer className="d-flex flex-column align-items-end">
-        <Button variant="primary">
-          Add to My Bias
-        </Button>
-      </Card.Footer>
     </Card>
   );
 
