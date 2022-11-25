@@ -85,8 +85,6 @@ function App() {
           <Col lg={3}>
             <Card>
               <Card.Body>
-              
-              <strong>Sort by: </strong>
                 <DropdownButton
                   id="dropdown-button-dark-example1"
                   variant="secondary"
@@ -126,9 +124,8 @@ function App() {
                   <Dropdown.Item eventKey="NCT 2020">NCT 2020</Dropdown.Item>
                   <Dropdown.Item eventKey="NCT 2021">NCT 2021</Dropdown.Item>
                 </DropdownButton>
-                <Button className="btn btn-danger" type="button" onClick={handleClearFilter}>Clear Filter</Button>
                 <br/>
-                <strong>My Bias List:</strong>
+                <strong>My Bias List:</strong> <br/><br/>
                 {biasList.map(({name, age}) => {
                   total += age
                     return (
@@ -136,6 +133,7 @@ function App() {
                       {name}: {age}
                     </ListGroup.Item>
                   )})}
+                <Button className="btn btn-danger" type="button" onClick={handleClearFilter}>Clear Filter</Button>
                 </Card.Body>
                 <Card.Footer>Average Age of My Bias: {totalNum === 0 ? "" : total / totalNum}</Card.Footer>
               </Card>
