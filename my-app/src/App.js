@@ -112,7 +112,7 @@ function App() {
                   id="dropdown-button-dark-example3"
                   variant="secondary"
                   menuVariant="dark"
-                  title="Filter by SubGroups button"
+                  title="Filter by SubGroups:"
                   className="mt-2"
                   onSelect={selectFilterGroup}>
                   <Dropdown.Item eventKey="All"> All </Dropdown.Item>
@@ -125,7 +125,7 @@ function App() {
                   <Dropdown.Item eventKey="NCT 2021">NCT 2021</Dropdown.Item>
                 </DropdownButton>
                 <br/>
-                <strong>My Bias List:</strong> <br/><br/>
+                <strong>My Bias List:</strong> 
                 {biasList.map(({name, age}) => {
                   total += age
                     return (
@@ -133,6 +133,7 @@ function App() {
                       {name}: {age}
                     </ListGroup.Item>
                   )})}
+                  <br/>
                 <Button className="btn btn-danger" type="button" onClick={handleClearFilter}>Clear Filter</Button>
                 </Card.Body>
                 <Card.Footer>Average Age of My Bias: {totalNum === 0 ? "" : total / totalNum}</Card.Footer>
