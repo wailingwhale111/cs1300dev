@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import nctData from "./assets/nct-data.json";
 import NCTMember from "./components/NCTMember";
-import { Container, Row, Col, DropdownButton, Dropdown, Form, ListGroup, Card} from "react-bootstrap";
+import { Container, Row, Col, DropdownButton, Dropdown, ListGroup, Card, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -47,6 +47,12 @@ function App() {
     }
   }
 
+  function handleClearFilter() {
+    setGroup("All");
+    setPosition("All");
+    setSorting("Age");
+  }
+
   let filteredData = nctData.filter(matchesFilterGroup);
   let sortedData = (sorting === "Age" ? filteredData.sort((a, b) => {return b.age - a.age;}) : filteredData.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
 
@@ -88,8 +94,8 @@ function App() {
                   title="Sort by:"
                   className="mt-2"
                   onSelect={selectSorting}>
-                  <Dropdown.Item href="#/action-1" eventKey="Age" active> Age </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" eventKey="Alphabetical"> Alphabetical </Dropdown.Item>
+                  <Dropdown.Item eventKey="Age"> Age </Dropdown.Item>
+                  <Dropdown.Item eventKey="Alphabetical"> Alphabetical </Dropdown.Item>
                 </DropdownButton>
                 <DropdownButton 
                   id="dropdown-button-dark-example2"
@@ -98,28 +104,30 @@ function App() {
                   title="Filter by Position:"
                   className="mt-2"
                   onSelect={selectFilterPosition}>
-                  <Dropdown.Item href="#/action-1" eventKey="All" active> All </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" eventKey="Vocalist">Vocalist</Dropdown.Item>
-                  <Dropdown.Item href="#/action-3" eventKey="Rapper">Rapper</Dropdown.Item>
-                  <Dropdown.Item href="#/action-4" eventKey="Dancer">Dancer</Dropdown.Item>
-                  <Dropdown.Item href="#/action-5" eventKey="Leader">Leader</Dropdown.Item>
+                  <Dropdown.Item eventKey="All"> All </Dropdown.Item>
+                  <Dropdown.Item eventKey="Vocalist">Vocalist</Dropdown.Item>
+                  <Dropdown.Item eventKey="Rapper">Rapper</Dropdown.Item>
+                  <Dropdown.Item eventKey="Dancer">Dancer</Dropdown.Item>
+                  <Dropdown.Item eventKey="Leader">Leader</Dropdown.Item>
                 </DropdownButton>
                 <DropdownButton
-                  id="dropdown-button-dark-example2"
+                  id="dropdown-button-dark-example3"
                   variant="secondary"
                   menuVariant="dark"
                   title="Filter by SubGroups button"
                   className="mt-2"
                   onSelect={selectFilterGroup}>
-                  <Dropdown.Item href="#/action-6" eventKey="All" active> All </Dropdown.Item>
-                  <Dropdown.Item href="#/action-7" eventKey="NCT DREAM">NCT DREAM</Dropdown.Item>
-                  <Dropdown.Item href="#/action-8" eventKey="NCT 127">NCT 127</Dropdown.Item>
-                  <Dropdown.Item href="#/action-9" eventKey="NCT U">NCT U</Dropdown.Item>
-                  <Dropdown.Item href="#/action-10" eventKey="WayV">WayV</Dropdown.Item>
-                  <Dropdown.Item href="#/action-11" eventKey="NCT 2018">NCT 2018</Dropdown.Item>
-                  <Dropdown.Item href="#/action-12" eventKey="NCT 2020">NCT 2020</Dropdown.Item>
-                  <Dropdown.Item href="#/action-13" eventKey="NCT 2021">NCT 2021</Dropdown.Item>
+                  <Dropdown.Item eventKey="All"> All </Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT DREAM">NCT DREAM</Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT 127">NCT 127</Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT U">NCT U</Dropdown.Item>
+                  <Dropdown.Item eventKey="WayV">WayV</Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT 2018">NCT 2018</Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT 2020">NCT 2020</Dropdown.Item>
+                  <Dropdown.Item eventKey="NCT 2021">NCT 2021</Dropdown.Item>
                 </DropdownButton>
+                <Button className="btn btn-danger" type="button" onClick={handleClearFilter}>Clear Filter</Button>
+                <br/>
                 <strong>My Bias List:</strong>
                 {biasList.map(({name, age}) => {
                   total += age
