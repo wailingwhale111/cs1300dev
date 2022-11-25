@@ -48,7 +48,7 @@ export default function NCTMember(props) {
     </svg>
     </Button>
   const card = (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "16rem" , padding:"0.5rem"}}>
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
         <Card.Title><strong>{props.name}</strong></Card.Title>
