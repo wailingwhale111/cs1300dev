@@ -1,5 +1,5 @@
 import "./NCTMember.css"
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { Card, Button } from "react-bootstrap"
 
 export default function NCTMember(props) {
@@ -10,15 +10,12 @@ export default function NCTMember(props) {
     if (peopleExistInList === undefined) {
       props.setBiasList(props.biasList.concat(peopleInBias));
       props.setTotalNum(props.totalNum + 1);
-    } 
+    }
     setButtonState(!buttonState);
   }; 
 
   function handleRemoveClick() {
-    console.log(props.biasList)
     const peopleExistInList = props.biasList.findIndex((element) => element.name === props.name);
-    
-    console.log(peopleExistInList)
     if (peopleExistInList !== undefined) {
       props.setTotalNum(props.totalNum - 1);
       let temp = props.biasList
@@ -29,9 +26,9 @@ export default function NCTMember(props) {
           return element;
         }
       })
-      props.setBiasList(temp)
+      props.setBiasList(temp);
     }
-    setButtonState(!buttonState); 
+    setButtonState(!buttonState);
   };
   const addButton = 
     <Button className="btn btn-dark" type="button" onClick={handleAddClick}> 
@@ -57,8 +54,7 @@ export default function NCTMember(props) {
           <br/> <strong>Age:</strong> {props.age}<hr/>
         </Card.Subtitle>
         <Card.Text className="d-flex flex-column align-items-end">
-          { buttonState ? addButton : removeButton }
-         
+          { buttonState ? addButton : removeButton } 
         </Card.Text>
       </Card.Body>
     </Card>
