@@ -18,6 +18,8 @@ function App() {
   const [position, setPosition] = useState("All");
   const [group, setGroup] = useState("All");
   const [sorting, setSorting] = useState("Age");
+  // const [idk, setIdk] = useState(nctData)
+  
   let total = 0;
 
   const selectFilterGroup = eventKey => {
@@ -55,6 +57,13 @@ function App() {
 
   let filteredData = nctData.filter(matchesFilterGroup);
   let sortedData = (sorting === "Age" ? filteredData.sort((a, b) => {return b.age - a.age;}) : filteredData.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
+  // console.log(sortedData);
+  // useEffect(() => {
+  //   console.log("triggered a rerender")
+  //   let filtered = nctData.filter(matchesFilterGroup)
+  //   let sortedData = (sorting === "Age" ? filtered.sort((a, b) => {return b.age - a.age;}) : filtered.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
+  //   setIdk(sortedData)
+  // }, [position, group, sorting]) 
 
   return (
     <div className="App">
@@ -67,7 +76,7 @@ function App() {
                 {sortedData.map((member, index) => (
                  <Col id={index} className="d-flex justify-content-around align-items-stretch">
                    <NCTMember 
-                    index={index} 
+                    key={member.name} 
                     name={member.name} 
                     image={member.image} 
                     position={member.position} 
