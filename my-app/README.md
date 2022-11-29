@@ -19,3 +19,5 @@ total number (to calculate the average) and biaslist.
 I tried to make the website responsive by putting the filter on the top of the page so that
 the users recognize that it is a functionality that they can use with this website when the
 screen shrinks.
+
+P.S. The background color is their fandom color :")
