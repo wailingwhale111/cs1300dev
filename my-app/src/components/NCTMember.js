@@ -5,16 +5,11 @@ import { Card, Button } from "react-bootstrap"
 export default function NCTMember(props) {
   const [buttonState, setButtonState] = useState(true);
   useEffect(() => {
-
-    const peopleInBias = [{name: props.name, age: props.age}];
     const peopleExistInList = props.biasList.find((element) => element.name === props.name);
-    // console.log('prop got rerendered', props.biasList)
     setButtonState(peopleExistInList === undefined)
-    // console.log(props.name, buttonState)
   }, [])
 	function handleAddClick() {
     const peopleInBias = [{name: props.name, age: props.age}];
-    console.log(props.name, buttonState)
     const peopleExistInList = props.biasList.find((element) => element.name === props.name);
     if (peopleExistInList === undefined) {
       props.setBiasList(props.biasList.concat(peopleInBias));
@@ -25,7 +20,6 @@ export default function NCTMember(props) {
 
   function handleRemoveClick() {
     const peopleExistInList = props.biasList.findIndex((element) => element.name === props.name);
-    console.log(props.name, buttonState)
     if (peopleExistInList !== undefined) {
       props.setTotalNum(props.totalNum - 1);
       let temp = props.biasList

@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+I made my project on a K-Pop group called NCT. NCT is one of the unique groups because they have this
+theme of "infinity." Currently, there are total of 23 members, and more get added every year.
+There are currently four sub groups (NCT U, NCT 127, NCT Dream, and WayV), and more can be created
+as necessary. Because of this, they have NCT 2018, 2020, and 2021, where they released an album with
+every NCT member within that year. Every member has position of either dance, vocal, or rap.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+So, with my application, you are able to sort by age and alphabetical of all the members and filter by
+sub-groups and position. Among the 23 members, it's hard to have one "bias" (a term used to say your
+favorite member), so I made a "bias list," where you can add your favorite members to your list, and
+it gives an average of their age.
 
-## Available Scripts
+Website link:
 
-In the project directory, you can run:
+I only had NCTMember Component, which handles adding and removing members from the bias list and
+displaying the members using "Card" from react bootstrap. To implement this, the props I had to
+use were: name, image, position, group, age, and two useState variables that help re-render the
+total number (to calculate the average) and biaslist.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I tried to make the website responsive by putting the filter on the top of the page so that
+the users recognize that it is a functionality that they can use with this website when the
+screen shrinks.

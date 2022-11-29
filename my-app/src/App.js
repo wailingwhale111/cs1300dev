@@ -11,14 +11,11 @@ nctData.forEach((member) => {
 });
 
 function App() {
-  // TODO: use useState to create a state variable to hold the state of the cart
-  /* add your cart state code here */
   const [biasList, setBiasList] = useState([]);
   const [totalNum, setTotalNum] = useState(0);
   const [position, setPosition] = useState("All");
   const [group, setGroup] = useState("All");
   const [sorting, setSorting] = useState("Age");
-  // const [idk, setIdk] = useState(nctData)
   
   let total = 0;
 
@@ -56,41 +53,13 @@ function App() {
   }
 
   let filteredData = nctData.filter(matchesFilterGroup);
-  let sortedData = (sorting === "Age" ? filteredData.sort((a, b) => {return b.age - a.age;}) : filteredData.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
-  // console.log(sortedData);
-  // useEffect(() => {
-  //   console.log("triggered a rerender")
-  //   let filtered = nctData.filter(matchesFilterGroup)
-  //   let sortedData = (sorting === "Age" ? filtered.sort((a, b) => {return b.age - a.age;}) : filtered.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
-  //   setIdk(sortedData)
-  // }, [position, group, sorting]) 
+  let sortedData = (sorting === "Age" ? filteredData.sort((a, b) => {return b.age - a.age;}) 
+    : filteredData.sort((a, b) => {return a.alphabetical - b.alphabetical;}))
 
   return (
     <div className="App">
       <Container>
         <Row>
-          <Col>
-            <h1><strong>My NCT Universe</strong></h1> 
-            <Container>
-              <Row>
-                {sortedData.map((member, index) => (
-                 <Col id={index} className="d-flex justify-content-around align-items-stretch">
-                   <NCTMember 
-                    key={member.name} 
-                    name={member.name} 
-                    image={member.image} 
-                    position={member.position} 
-                    group={member.group} 
-                    alphabetical={member.alphabetical} 
-                    age={member.age}
-                    setBiasList={setBiasList} 
-                    biasList={biasList}
-                    totalNum={totalNum}
-                    setTotalNum={setTotalNum}/>
-                </Col>))}
-              </Row>
-            </Container>
-          </Col>
           <Col lg={3}>
             <Card>
               <Card.Body>
@@ -148,10 +117,30 @@ function App() {
                 <Card.Footer>Average Age of My Bias: {totalNum === 0 ? "" : total / totalNum}</Card.Footer>
               </Card>
           </Col>
+          <Col>
+            <h1><strong>My NCT Universe</strong></h1> 
+            <Container>
+              <Row>
+                {sortedData.map((member, index) => (
+                 <Col id={index} className="d-flex justify-content-around align-items-stretch">
+                   <NCTMember 
+                    key={member.name} 
+                    name={member.name} 
+                    image={member.image} 
+                    position={member.position} 
+                    group={member.group}  
+                    age={member.age}
+                    setBiasList={setBiasList} 
+                    biasList={biasList}
+                    totalNum={totalNum}
+                    setTotalNum={setTotalNum}/>
+                </Col>))}
+              </Row>
+            </Container>
+          </Col>
+          
         </Row>
       </Container>
-      
-      
     </div>
   );
 }
